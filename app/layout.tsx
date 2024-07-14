@@ -13,6 +13,8 @@ import { fontSans } from "@/config/fonts";
 import MobileOnlyApp from "@/components/mobileOnly";
 import Navbar from "@/components/navbar";
 
+import ProviderWrapper from "../components/provider-wrapper";
+
 import {
   EthersExtension,
   DynamicContextProvider,
