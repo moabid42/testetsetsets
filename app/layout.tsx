@@ -62,14 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <DynamicContextProvider
-        settings={{
-          environmentId: "78fb9e9b-0c28-4443-a308-355fd042671f",
-          walletConnectors: [EthereumWalletConnectors],
-          walletConnectorExtensions: [EthersExtension],
-          overrides: { evmNetworks },
-        }}
-      >
+      <ProviderWrapper>
       <head />
       <body
         className={clsx(
@@ -96,7 +89,7 @@ export default function RootLayout({
           <ToastContainer />
         </Providers>
       </body>
-      </DynamicContextProvider>
+      </ProviderWrapper>
     </html>
   );
 }

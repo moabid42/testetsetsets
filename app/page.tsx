@@ -167,6 +167,7 @@ export default function Home() {
 
   return (
     <section className="flex flex-col items-center justify-center h-full">
+      <DynamicWidget />
       <Input
         isClearable
         className="p-4"
@@ -213,7 +214,6 @@ export default function Home() {
           Sign And Submit
         </Button>
       </div>
-        <DynamicWidget />
     </section>
   );
 }
