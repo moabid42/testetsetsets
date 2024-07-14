@@ -38,7 +38,8 @@
 		"react-toastify": "^10.0.5",
 		"@dynamic-labs/ethereum": "*",
 		"@dynamic-labs/ethers-v6": "*",
-		"@dynamic-labs/sdk-react-core": "*"
+		"@dynamic-labs/sdk-react-core": "*",
+		"next-auth": "beta"
 	},
 	"devDependencies": {
 		"@types/node": "20.5.7",
