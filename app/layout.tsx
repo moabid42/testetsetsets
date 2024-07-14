@@ -13,8 +13,6 @@ import { fontSans } from "@/config/fonts";
 import MobileOnlyApp from "@/components/mobileOnly";
 import Navbar from "@/components/navbar";
 
-import ProviderWrapper from "../components/provider-wrapper";
-
 import {
   EthersExtension,
   DynamicContextProvider,
@@ -64,7 +62,14 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <ProviderWrapper>
+      <DynamicContextProvider
+        settings={{
+          environmentId: "78fb9e9b-0c28-4443-a308-355fd042671f",
+          walletConnectors: [EthereumWalletConnectors],
+          walletConnectorExtensions: [EthersExtension],
+          overrides: { evmNetworks },
+        }}
+      >
       <head />
       <body
         className={clsx(
@@ -91,7 +96,7 @@ export default function RootLayout({
           <ToastContainer />
         </Providers>
       </body>
-      </ProviderWrapper>
+      </DynamicContextProvider>
     </html>
   );
 }
